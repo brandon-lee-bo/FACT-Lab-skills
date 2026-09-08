@@ -96,9 +96,9 @@ Restart OMP, then invoke a skill with:
 /skill:<skill-name> Describe the research task.
 ```
 
-The installer requires only `git`, `curl`, and a POSIX shell; it does not require
-Node.js or npm. Run the same command again to update the catalog. See the harness
-documentation for
+The installer requires only `curl`, `tar`, and a POSIX shell; it does not require
+Git, Node.js, or npm. Run the same command again to update the catalog. See the
+harness documentation for
 [Codex](https://developers.openai.com/codex/skills/),
 [Claude Code](https://code.claude.com/docs/en/skills), and
 [Pi](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/skills.md).
