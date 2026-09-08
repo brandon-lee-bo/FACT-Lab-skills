@@ -5,63 +5,66 @@ description: Construct and revise computer-architecture papers by aligning probl
 
 # Architecture Paper Writing
 
-Present the final intellectual structure, not the research diary. Preserve the
-author's intent while making the contribution evidence-bounded and understandable
-without project history.
+Present the final intellectual structure, not the research diary. Preserve intent
+while making the contribution evidence-bounded and clear without project history.
 
 ## Build the Argument
 
-Before polishing sentences, freeze five statements:
+Before drafting prose, freeze the **problem**, **missing decision**, **insight**,
+**mechanism**, and strongest valid **evidence**. Repair this chain before line
+editing. A feature combination, metric, formula, or implementation substrate is
+not itself the contribution.
 
-1. **Problem:** What important system behavior limits the target outcome?
-2. **Missing decision:** What can the closest work not represent or control?
-3. **Insight:** What principle enables a different organization?
-4. **Mechanism:** What state, decision, action, and timing implement it?
-5. **Evidence:** What strongest valid result supports the bounded claim?
+Give each section and paragraph a contract: its question, permitted conclusion,
+evidence, and boundary. Introduction frames the gap. Background defines necessary
+concepts and closest work. Motivation establishes the problem or requirements.
+Design explains mechanism and cost. Evaluation tests benefit and cause. Conclusion
+summarizes validated findings. Fix this progression before polishing language.
 
-Repair this chain before line editing. Do not present a feature combination, a
-new metric, or an implementation substrate as the contribution.
-
-Give sections distinct jobs: Introduction frames the gap; Background defines
-required concepts and closest work; Motivation establishes requirements; Design
-explains mechanism and cost; Evaluation tests claims; Conclusion summarizes
-validated findings.
+Before an important section, read its counterparts in the closest top-venue papers
+for argument, evidence, and figure choices. Do not copy wording or structure.
 
 ## Write Precisely
 
-Give each paragraph one argumentative job:
+Give each paragraph one job, normally `claim or question -> evidence or mechanism
+-> reason -> implication`. Every sentence must serve the paragraph, connect to its
+neighbors, and define, claim, support, or explain. Delete repetition, empty
+transitions, and detached defensive caveats.
 
-`claim or question -> evidence or mechanism -> reason -> implication`
-
-Define unfamiliar terms, metrics, variables, granularities, and time windows at
-first use. Introduce a term only for a genuinely new object, decision, or
-mechanism. Keep terminology stable across prose, equations, figures, and captions.
+Define unfamiliar terms, metrics, granularities, and windows at first use. Name
+only genuinely new objects or decisions. Never replace explanation with a name.
 
 Credit capabilities prior work already has. Compare closest mechanisms by
-`object | information | decision | action | timing | feedback | cost`; state a
-bounded difference rather than claiming prior work “ignores” a topic.
+`object | information | decision | action | timing | feedback | cost`. State a
+bounded difference instead of saying prior work “ignores” a topic. Cite the exact
+fact, capability, or limitation being discussed.
 
-Separate measured results, architecture-informed interpretations, and untested
-hypotheses. Do not infer performance from a proxy, causality from correlation,
-generality from a selected cohort, or full-system cost from partial synthesis.
-Recheck baselines, units, normalization, workload counts, and headline numbers.
+Explain mechanisms through observed information, resulting decision, executed
+hardware or software action, and timing.
 
-Make figures part of the argument. A reader scanning the title, abstract,
-introduction, figures, and captions should recover the problem, mechanism, and
-main result. Inspect the rendered paper, not only its source.
+Separate measurements, architecture-informed interpretations, and hypotheses.
+Do not infer performance from a proxy, causality from correlation, generality
+from a selected cohort, or full-system cost from partial synthesis. Recheck
+baselines, normalization, workload counts, and headline numbers.
+
+Make each figure answer a declared question. Preserve negative results and needed
+conditions. Keep typography, color, scale, and legends consistent, and inspect
+the rendered figure at its actual column width.
+
+Write direct English with standard terms and short sentences. Avoid ornate
+phrasing and semicolons when ordinary sentences are clearer.
 
 ## Review and Iterate
 
-Run four passes after each substantial revision:
+Run at least two cycles after a substantial revision:
 
 1. **Cold reader:** undefined terms, hidden assumptions, and logical jumps.
 2. **Senior architect:** bottleneck, causal path, hardware feasibility,
    alternatives, scalability, and closest-work distinction.
-3. **Skeptical reviewer:** novelty, evidence, fairness, reproducibility,
-   simplicity, and overclaiming.
-4. **Revision:** repair the highest-impact problem with the smallest coherent
-   change, then reread the surrounding section.
+3. **Skeptical evidence reviewer:** novelty, evidence scope, fairness,
+   reproducibility, negative results, and overclaiming.
 
-Repeat only while a reject-level issue or material comprehension failure remains.
-Return the revised artifact first, followed by a concise rationale and any
-evidence blocker that prose cannot repair.
+Record concrete failures, repair the highest-impact one with the smallest coherent
+change, then reread the surrounding context. Stop when no reject-level or material
+comprehension issue remains. Return the revision first, then a concise rationale
+and any evidence blocker that prose cannot repair.
