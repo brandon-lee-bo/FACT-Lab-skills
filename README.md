@@ -1,130 +1,86 @@
 <div align="center">
 
-# FACT-Lab Skills
+# 🔬 FACT-Lab Skills
 
 **Reusable research workflows for AI coding agents**
 
-A small, curated collection of Agent Skills created and reviewed by FACT-Lab.
+[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-open%20standard-4f46e5)](https://agentskills.io)
+[![Catalog](https://img.shields.io/badge/catalog-curated-0f766e)](#-skill-catalog)
+[![Last commit](https://img.shields.io/github/last-commit/brandon-lee-bo/FACT-Lab-skills?label=updated&color=475569)](https://github.com/brandon-lee-bo/FACT-Lab-skills/commits/main)
 
-[Browse Researcher Skills](skills/researcher) · [Engineer](skills/engineer) · [Review](skills/review) · [Writing](skills/writing)
+[Browse](#-skill-catalog) · [Install](#-use-a-skill) · [Contribute](#-add-a-skill)
 
 </div>
 
----
+FACT-Lab Skills turns repeatable research experience into concise, reusable
+workflows. Each skill defines when a procedure applies, how to execute it, and
+how to validate the result.
 
-## Repository and Structure
+## 📚 Skill Catalog
 
-FACT-Lab Skills turns repeatable research experience into reusable workflows.
-A skill should tell an agent when a research procedure applies, how to execute
-it, and how to judge whether its output is valid. It is more than a one-off
-prompt or a collection of general suggestions.
+Skills are grouped by research role rather than contributor:
 
-Skills are organized by their primary role in the research process, not by
-author:
-
-```text
-FACT-Lab-skills/
-├── README.md
-└── skills/
-    ├── researcher/    # Exploration, literature, problems, hypotheses, and ideas
-    ├── engineer/      # Implementation, experiments, simulation, and hardware
-    ├── review/        # Cold reading, expert critique, evidence, and sign-off
-    └── writing/       # Paper structure, drafting, figures, and rebuttals
-```
-
-| Category | Typical use |
+| Category | Focus |
 |---|---|
-| **Researcher** | Explore research directions, study literature, identify problems, form hypotheses, and develop mechanism ideas |
-| **Engineer** | Implement mechanisms, run experiments, validate systems, generate artifacts, and evaluate hardware cost |
-| **Review** | Cold-read work and audit novelty, evidence, baselines, technical reasoning, and final claims from specialist perspectives |
-| **Writing** | Organize paper narratives, draft and revise sections, explain figures, prepare rebuttals, and polish manuscripts |
+| [🔬 **Researcher**](skills/researcher) | Literature, research questions, hypotheses, and mechanism exploration |
+| [🛠️ **Engineer**](skills/engineer) | Implementation, experiments, simulation, and hardware evaluation |
+| [🔍 **Review**](skills/review) | Cold reading, expert critique, evidence audits, and sign-off |
+| [✍️ **Writing**](skills/writing) | Paper structure, drafting, figure narratives, rebuttals, and polishing |
 
-The repository starts with an empty catalog. Skills will be added after their
-content and scope have been reviewed.
+> The catalog is intentionally empty until the first skills complete review.
 
----
+## 🚀 Use a Skill
 
-## Using a Skill
-
-Every published skill has its own GitHub directory. For example:
-
-```text
-https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills/arch-idea-reviewer
-```
-
-To install it, enter the following command in a Codex conversation:
-
-```text
-$skill-installer install https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills/arch-idea-reviewer
-```
-
-Restart Codex after installation. You can then invoke the skill explicitly:
-
-```text
-$arch-idea-reviewer Generate ideas based on this repo and review them in a skeptical reviewer style.
-```
-
-For a skill published in this repository, use its complete directory URL:
+Install a skill by passing its GitHub directory to Codex:
 
 ```text
 $skill-installer install https://github.com/brandon-lee-bo/FACT-Lab-skills/tree/main/skills/<category>/<skill-name>
 ```
 
-Then restart Codex and use:
+Restart Codex, then invoke it explicitly:
 
 ```text
 $<skill-name> Describe the research task you want the skill to perform.
 ```
 
-This repository is currently private, so the environment running Codex must
-have permission to access it.
+Example using an existing public skill:
 
----
+```text
+$skill-installer install https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills/arch-idea-reviewer
 
-## Adding a Skill
+$arch-idea-reviewer Generate ideas based on this repo and review them in a skeptical reviewer style.
+```
 
-A skill is a directory containing an entry file named exactly `SKILL.md`:
+## ➕ Add a Skill
+
+Each skill is a directory with a required `SKILL.md` entry point:
 
 ```text
 skills/<category>/<skill-name>/
-├── SKILL.md           # Required: metadata and instructions
-├── references/        # Optional: focused documentation
-├── scripts/           # Optional: executable helpers or checks
-└── assets/            # Optional: reusable templates or resources
+├── SKILL.md        # Required
+├── references/     # Optional
+├── scripts/        # Optional
+└── assets/         # Optional
 ```
 
-Every `SKILL.md` must begin with YAML frontmatter containing `name` and
-`description`:
+Begin `SKILL.md` with discoverable metadata:
 
-```markdown
+```yaml
 ---
 name: paper-writing-review-loop
 description: Review and revise research-paper prose through cold-reader, domain-expert, and evidence-audit passes. Use when polishing a paper section, figure narrative, or rebuttal.
 ---
-
-# Paper Writing Review Loop
-
-Instructions for the agent begin here.
 ```
 
-Contribution rules:
+Before opening a pull request:
 
-1. Place the skill under `researcher`, `engineer`, `review`, or `writing` based
-   on its primary role.
-2. Use lowercase letters, numbers, and hyphens for `<skill-name>`.
-3. Make the frontmatter `name` exactly match the skill directory name.
-4. Write a `description` that explains both what the skill does and when it
-   should be used; agents rely on this field for discovery.
-5. Encode a repeated, non-obvious research workflow rather than a one-off
-   prompt or generic advice.
-6. State the expected outcome, important checks, evidence boundaries, and
-   meaningful failure conditions.
-7. Keep `SKILL.md` focused. Add `references/`, `scripts/`, or `assets/` only
-   when they materially improve the workflow.
-8. Do not include credentials, private data, unpublished results, temporary
-   machine paths, or project-specific secrets.
-9. Test the skill on a realistic research task before proposing it for shared
-   use.
+- place the skill in its primary category;
+- use a lowercase, hyphenated directory name matching `name`;
+- state both what the skill does and when it should trigger;
+- capture a reusable workflow, its checks, and meaningful failure conditions;
+- add supporting files only when they improve execution;
+- exclude credentials, private data, unpublished results, and temporary paths;
+- test the skill on a realistic task and summarize that test in the pull request.
 
-Open a pull request containing the skill directory and briefly explain the
-problem it captures, when it should trigger, and how it was tested.
+See the [Agent Skills specification](https://agentskills.io/specification) for
+the underlying format.
