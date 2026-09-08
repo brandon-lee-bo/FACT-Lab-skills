@@ -27,7 +27,8 @@ Skills are grouped by research role rather than contributor:
 | [🔍 **Review**](skills/review) | Cold reading, expert critique, evidence audits, and sign-off |
 | [✍️ **Writing**](skills/writing) | Paper structure, drafting, figure narratives, rebuttals, and polishing |
 
-> The catalog is intentionally empty until the first skills complete review.
+Initial release: [Architecture Idea Reviewer](skills/research/arch-idea-reviewer)
+and [Architecture Paper Writing](skills/writing/architecture-paper-writing).
 
 ## 🚀 Use a Skill
 
