@@ -31,63 +31,53 @@ Skills are grouped by research role rather than contributor:
 
 ## 🚀 Use a Skill
 
-The same `SKILL.md` works across supported harnesses, but installation and
-refresh commands differ.
+Install every skill in this repository into the harness you use. Each command
+targets only the selected harness.
 
 [OpenAI Codex](#openai-codex) · [Claude Code](#claude-code) · [Pi](#pi)
 
 ### OpenAI Codex
 
-Pass the skill directory to the installer:
-
-```text
-$skill-installer install https://github.com/brandon-lee-bo/FACT-Lab-skills/tree/main/skills/<category>/<skill-name>
+```bash
+npx -y skills@latest add brandon-lee-bo/FACT-Lab-skills --skill '*' --global --agent codex --yes
 ```
 
-Codex detects new skills automatically; restart only if the skill does not
-appear. Invoke it with:
+Codex detects the installed skills automatically; restart only if they do not
+appear. Invoke a skill with:
 
 ```text
-$<skill-name> Describe the research task you want the skill to perform.
-```
-
-For example:
-
-```text
-$skill-installer install https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills/arch-idea-reviewer
-
-$arch-idea-reviewer Generate ideas based on this repo and review them in a skeptical reviewer style.
+$<skill-name> Describe the research task.
 ```
 
 ### Claude Code
 
-Clone this repository and copy the selected skill into Claude Code's personal
-skill directory:
-
 ```bash
-git clone --depth 1 https://github.com/brandon-lee-bo/FACT-Lab-skills.git
-mkdir -p ~/.claude/skills
-cp -R FACT-Lab-skills/skills/<category>/<skill-name> ~/.claude/skills/
+npx -y skills@latest add brandon-lee-bo/FACT-Lab-skills --skill '*' --global --agent claude-code --yes
 ```
 
-Claude Code normally detects the new skill without restarting. If
-`~/.claude/skills` did not exist when the current session started, restart
-Claude Code once. Invoke it with `/skill-name`.
+Claude Code normally detects the installed skills without restarting. If its
+top-level skill directory did not exist when the current session started,
+restart once. Invoke a skill with:
+
+```text
+/<skill-name> Describe the research task.
+```
 
 ### Pi
 
-Copy the selected skill from the cloned repository into Pi's personal skill
-directory:
-
 ```bash
-mkdir -p ~/.pi/agent/skills
-cp -R FACT-Lab-skills/skills/<category>/<skill-name> ~/.pi/agent/skills/
+npx -y skills@latest add brandon-lee-bo/FACT-Lab-skills --skill '*' --global --agent pi --yes
 ```
 
-Run `/reload` in Pi, then invoke the skill with `/skill:skill-name`; no restart
-is required.
+Run `/reload` in Pi; no restart is required. Invoke a skill with:
 
-See the official skill documentation for
+```text
+/skill:<skill-name> Describe the research task.
+```
+
+These commands use the open-source
+[`skills` CLI](https://github.com/vercel-labs/skills) and require `npx`. See
+the harness documentation for
 [Codex](https://developers.openai.com/codex/skills/),
 [Claude Code](https://code.claude.com/docs/en/skills), and
 [Pi](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/skills.md).
