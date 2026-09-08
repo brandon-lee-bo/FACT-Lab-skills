@@ -123,8 +123,5 @@ Before pushing a skill:
 - exclude credentials, private data, unpublished results, and temporary paths;
 - test the skill on a realistic task.
 
-Anyone may contribute without asking first. Push the skill to a branch or fork
-and submit the change when it is ready.
-
 See the [Agent Skills specification](https://agentskills.io/specification) for
 the underlying format.
