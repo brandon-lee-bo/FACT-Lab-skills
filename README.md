@@ -6,7 +6,7 @@
 
 A small, curated collection of Agent Skills created and reviewed by FACT-Lab.
 
-[Browse Manager Skills](skills/manager) · [Planner](skills/planner) · [Engineer](skills/engineer) · [Reviewer](skills/reviewer)
+[Browse Researcher Skills](skills/researcher) · [Engineer](skills/engineer) · [Review](skills/review) · [Writing](skills/writing)
 
 </div>
 
@@ -26,18 +26,18 @@ author:
 FACT-Lab-skills/
 ├── README.md
 └── skills/
-    ├── manager/       # Project state, coordination, and evidence promotion
-    ├── planner/       # Literature, hypotheses, mechanisms, and experiment plans
-    ├── engineer/      # Implementation, simulation, instrumentation, and hardware
-    └── reviewer/      # Claims, baselines, papers, figures, and sign-off
+    ├── researcher/    # Exploration, literature, problems, hypotheses, and ideas
+    ├── engineer/      # Implementation, experiments, simulation, and hardware
+    ├── review/        # Cold reading, expert critique, evidence, and sign-off
+    └── writing/       # Paper structure, drafting, figures, and rebuttals
 ```
 
 | Category | Typical use |
 |---|---|
-| **Manager** | Maintain project state, coordinate resources, record decisions, and promote evidence between research stages |
-| **Planner** | Frame research questions, position related work, form hypotheses, decompose mechanisms, and design experiments |
-| **Engineer** | Implement mechanisms, run simulations, validate systems, generate artifacts, and evaluate hardware cost |
-| **Reviewer** | Audit novelty, evidence, baselines, manuscript logic, figures, rebuttals, and final claims |
+| **Researcher** | Explore research directions, study literature, identify problems, form hypotheses, and develop mechanism ideas |
+| **Engineer** | Implement mechanisms, run experiments, validate systems, generate artifacts, and evaluate hardware cost |
+| **Review** | Cold-read work and audit novelty, evidence, baselines, technical reasoning, and final claims from specialist perspectives |
+| **Writing** | Organize paper narratives, draft and revise sections, explain figures, prepare rebuttals, and polish manuscripts |
 
 The repository starts with an empty catalog. Skills will be added after their
 content and scope have been reviewed.
@@ -67,7 +67,7 @@ $arch-idea-reviewer Generate ideas based on this repo and review them in a skept
 For a skill published in this repository, use its complete directory URL:
 
 ```text
-$skill-installer install https://github.com/brandon-lee-bo/FACT-Lab-skills/tree/main/skills/<role>/<skill-name>
+$skill-installer install https://github.com/brandon-lee-bo/FACT-Lab-skills/tree/main/skills/<category>/<skill-name>
 ```
 
 Then restart Codex and use:
@@ -86,7 +86,7 @@ have permission to access it.
 A skill is a directory containing an entry file named exactly `SKILL.md`:
 
 ```text
-skills/<role>/<skill-name>/
+skills/<category>/<skill-name>/
 ├── SKILL.md           # Required: metadata and instructions
 ├── references/        # Optional: focused documentation
 ├── scripts/           # Optional: executable helpers or checks
@@ -109,7 +109,7 @@ Instructions for the agent begin here.
 
 Contribution rules:
 
-1. Place the skill under `manager`, `planner`, `engineer`, or `reviewer` based
+1. Place the skill under `researcher`, `engineer`, `review`, or `writing` based
    on its primary role.
 2. Use lowercase letters, numbers, and hyphens for `<skill-name>`.
 3. Make the frontmatter `name` exactly match the skill directory name.

@@ -1,4 +1,4 @@
 # Engineer Skills
 
-Implementation, instrumentation, simulation, reproducibility, hardware, and
-artifact-generation workflows belong here.
+Implementation, experiment execution, instrumentation, simulation,
+reproducibility, hardware evaluation, and artifact generation belong here.
