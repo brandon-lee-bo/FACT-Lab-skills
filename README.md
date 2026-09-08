@@ -31,25 +31,64 @@ Skills are grouped by research role rather than contributor:
 
 ## 🚀 Use a Skill
 
-Install a skill by passing its GitHub directory to Codex:
+The same `SKILL.md` works across supported harnesses, but installation and
+refresh commands differ.
+
+### OpenAI Codex
+
+Pass the skill directory to the installer:
 
 ```text
 $skill-installer install https://github.com/brandon-lee-bo/FACT-Lab-skills/tree/main/skills/<category>/<skill-name>
 ```
 
-Restart Codex, then invoke it explicitly:
+Codex detects new skills automatically; restart only if the skill does not
+appear. Invoke it with:
 
 ```text
 $<skill-name> Describe the research task you want the skill to perform.
 ```
 
-Example using an existing public skill:
+For example:
 
 ```text
 $skill-installer install https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills/arch-idea-reviewer
 
 $arch-idea-reviewer Generate ideas based on this repo and review them in a skeptical reviewer style.
 ```
+
+### Claude Code
+
+Clone this repository and copy the selected skill into Claude Code's personal
+skill directory:
+
+```bash
+git clone --depth 1 https://github.com/brandon-lee-bo/FACT-Lab-skills.git
+mkdir -p ~/.claude/skills
+cp -R FACT-Lab-skills/skills/<category>/<skill-name> ~/.claude/skills/
+```
+
+Claude Code normally detects the new skill without restarting. If
+`~/.claude/skills` did not exist when the current session started, restart
+Claude Code once. Invoke it with `/skill-name`.
+
+### Pi
+
+Copy the selected skill from the cloned repository into Pi's personal skill
+directory:
+
+```bash
+mkdir -p ~/.pi/agent/skills
+cp -R FACT-Lab-skills/skills/<category>/<skill-name> ~/.pi/agent/skills/
+```
+
+Run `/reload` in Pi, then invoke the skill with `/skill:skill-name`; no restart
+is required.
+
+See the official skill documentation for
+[Codex](https://developers.openai.com/codex/skills/),
+[Claude Code](https://code.claude.com/docs/en/skills), and
+[Pi](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/skills.md).
 
 ## ➕ Add a Skill
 
