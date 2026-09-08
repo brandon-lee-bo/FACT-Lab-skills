@@ -40,7 +40,7 @@ targets only the selected harness.
 ### OpenAI Codex
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/main/install.sh | sh -s -- codex
+curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/fa605113149c9082650f0a7c92b482bac8d2054e/install.sh | sh -s -- codex
 ```
 
 Codex detects the installed skills automatically; restart only if they do not
@@ -53,7 +53,7 @@ $<skill-name> Describe the research task.
 ### Claude Code
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/main/install.sh | sh -s -- claude-code
+curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/fa605113149c9082650f0a7c92b482bac8d2054e/install.sh | sh -s -- claude-code
 ```
 
 Claude Code normally detects the installed skills without restarting. If its
@@ -67,7 +67,7 @@ restart once. Invoke a skill with:
 ### Pi
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/main/install.sh | sh -s -- pi
+curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/fa605113149c9082650f0a7c92b482bac8d2054e/install.sh | sh -s -- pi
 ```
 
 Run `/reload` in Pi; no restart is required. Invoke a skill with:
@@ -87,7 +87,7 @@ curl -fsSL https://omp.sh/install | sh
 Then install every FACT-Lab skill into OMP:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/main/install.sh | sh -s -- omp
+curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/fa605113149c9082650f0a7c92b482bac8d2054e/install.sh | sh -s -- omp
 ```
 
 Restart OMP, then invoke a skill with:
