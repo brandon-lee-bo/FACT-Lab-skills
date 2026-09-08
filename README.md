@@ -40,7 +40,7 @@ targets only the selected harness.
 ### OpenAI Codex
 
 ```bash
-npx -y skills@latest add brandon-lee-bo/FACT-Lab-skills --skill '*' --global --agent codex --yes
+curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/main/install.sh | sh -s -- codex
 ```
 
 Codex detects the installed skills automatically; restart only if they do not
@@ -53,7 +53,7 @@ $<skill-name> Describe the research task.
 ### Claude Code
 
 ```bash
-npx -y skills@latest add brandon-lee-bo/FACT-Lab-skills --skill '*' --global --agent claude-code --yes
+curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/main/install.sh | sh -s -- claude-code
 ```
 
 Claude Code normally detects the installed skills without restarting. If its
@@ -67,7 +67,7 @@ restart once. Invoke a skill with:
 ### Pi
 
 ```bash
-npx -y skills@latest add brandon-lee-bo/FACT-Lab-skills --skill '*' --global --agent pi --yes
+curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/main/install.sh | sh -s -- pi
 ```
 
 Run `/reload` in Pi; no restart is required. Invoke a skill with:
@@ -87,7 +87,7 @@ curl -fsSL https://omp.sh/install | sh
 Then install every FACT-Lab skill into OMP:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/main/install-omp.sh | sh
+curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/main/install.sh | sh -s -- omp
 ```
 
 Restart OMP, then invoke a skill with:
@@ -96,9 +96,9 @@ Restart OMP, then invoke a skill with:
 /skill:<skill-name> Describe the research task.
 ```
 
-The Codex, Claude Code, and Pi commands use the open-source
-[`skills` CLI](https://github.com/vercel-labs/skills) and require `npx`. See
-the harness documentation for
+The installer requires only `git`, `curl`, and a POSIX shell; it does not require
+Node.js or npm. Run the same command again to update the catalog. See the harness
+documentation for
 [Codex](https://developers.openai.com/codex/skills/),
 [Claude Code](https://code.claude.com/docs/en/skills), and
 [Pi](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/skills.md).
