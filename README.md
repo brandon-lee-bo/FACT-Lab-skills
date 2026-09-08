@@ -35,7 +35,7 @@ and [Architecture Paper Writing](skills/writing/architecture-paper-writing).
 Install every skill in this repository into the harness you use. Each command
 targets only the selected harness.
 
-[OpenAI Codex](#openai-codex) · [Claude Code](#claude-code) · [Pi](#pi)
+[OpenAI Codex](#openai-codex) · [Claude Code](#claude-code) · [Pi](#pi) · [OMP](#omp)
 
 ### OpenAI Codex
 
@@ -76,12 +76,34 @@ Run `/reload` in Pi; no restart is required. Invoke a skill with:
 /skill:<skill-name> Describe the research task.
 ```
 
-These commands use the open-source
+### OMP
+
+Install [OMP](https://omp.sh/) first if needed:
+
+```bash
+curl -fsSL https://omp.sh/install | sh
+```
+
+Then install every FACT-Lab skill into OMP:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/brandon-lee-bo/FACT-Lab-skills/main/install-omp.sh | sh
+```
+
+Restart OMP, then invoke a skill with:
+
+```text
+/skill:<skill-name> Describe the research task.
+```
+
+The Codex, Claude Code, and Pi commands use the open-source
 [`skills` CLI](https://github.com/vercel-labs/skills) and require `npx`. See
 the harness documentation for
 [Codex](https://developers.openai.com/codex/skills/),
 [Claude Code](https://code.claude.com/docs/en/skills), and
 [Pi](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/skills.md).
+OMP uses its native
+[skill discovery](https://github.com/can1357/oh-my-pi/blob/main/docs/skills.md).
 
 ## ➕ Add a Skill
 
