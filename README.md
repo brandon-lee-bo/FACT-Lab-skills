@@ -22,8 +22,8 @@ Skills are grouped by research role rather than contributor:
 
 | Category | Focus |
 |---|---|
-| [🔬 **Researcher**](skills/researcher) | Literature, research questions, hypotheses, and mechanism exploration |
-| [🛠️ **Engineer**](skills/engineer) | Implementation, experiments, simulation, and hardware evaluation |
+| [🔬 **Research**](skills/research) | Literature, research questions, hypotheses, and mechanism exploration |
+| [🧪 **Experiment**](skills/experiment) | Experiment design, implementation, simulation, and hardware evaluation |
 | [🔍 **Review**](skills/review) | Cold reading, expert critique, evidence audits, and sign-off |
 | [✍️ **Writing**](skills/writing) | Paper structure, drafting, figure narratives, rebuttals, and polishing |
 
