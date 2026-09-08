@@ -34,6 +34,8 @@ Skills are grouped by research role rather than contributor:
 The same `SKILL.md` works across supported harnesses, but installation and
 refresh commands differ.
 
+[OpenAI Codex](#openai-codex) · [Claude Code](#claude-code) · [Pi](#pi)
+
 ### OpenAI Codex
 
 Pass the skill directory to the installer:
@@ -111,7 +113,7 @@ description: Review and revise research-paper prose through cold-reader, domain-
 ---
 ```
 
-Before opening a pull request:
+Before pushing a skill:
 
 - place the skill in its primary category;
 - use a lowercase, hyphenated directory name matching `name`;
@@ -119,7 +121,10 @@ Before opening a pull request:
 - capture a reusable workflow, its checks, and meaningful failure conditions;
 - add supporting files only when they improve execution;
 - exclude credentials, private data, unpublished results, and temporary paths;
-- test the skill on a realistic task and summarize that test in the pull request.
+- test the skill on a realistic task.
+
+Anyone may contribute without asking first. Push the skill to a branch or fork
+and submit the change when it is ready.
 
 See the [Agent Skills specification](https://agentskills.io/specification) for
 the underlying format.
