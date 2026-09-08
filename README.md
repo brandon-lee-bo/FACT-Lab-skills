@@ -121,8 +121,10 @@ Begin `SKILL.md` with discoverable metadata:
 
 ```yaml
 ---
-name: paper-writing-review-loop
-description: Review and revise research-paper prose through cold-reader, domain-expert, and evidence-audit passes. Use when polishing a paper section, figure narrative, or rebuttal.
+# Use a lowercase, hyphenated identifier that matches the skill directory.
+name: skill-name
+# State what the skill does and when it should be used.
+description: What the skill does and when it should be used.
 ---
 ```
 
